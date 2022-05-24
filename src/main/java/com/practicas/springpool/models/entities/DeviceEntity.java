@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "device", schema = "bookmypool", catalog = "")
 public class DeviceEntity {
     private int id;
-    private byte isBooked;
+    private int isBooked;
     private String serialNumber;
     private String brand;
     private String model;
@@ -25,11 +25,11 @@ public class DeviceEntity {
 
     @Basic
     @Column(name = "isBooked", nullable = false)
-    public byte getIsBooked() {
+    public int getIsBooked() {
         return isBooked;
     }
 
-    public void setIsBooked(byte isBooked) {
+    public void setIsBooked(int isBooked) {
         this.isBooked = isBooked;
     }
 
