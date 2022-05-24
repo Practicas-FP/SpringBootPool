@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "device", schema = "bookmypool", catalog = "")
 public class DeviceEntity {
     private int id;
+    private byte isBooked;
     private String serialNumber;
     private String brand;
     private String model;
@@ -20,6 +21,16 @@ public class DeviceEntity {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "isBooked", nullable = false)
+    public byte getIsBooked() {
+        return isBooked;
+    }
+
+    public void setIsBooked(byte isBooked) {
+        this.isBooked = isBooked;
     }
 
     @Basic
@@ -80,6 +91,7 @@ public class DeviceEntity {
         DeviceEntity that = (DeviceEntity) o;
 
         if (id != that.id) return false;
+        if (isBooked != that.isBooked) return false;
         if (serialNumber != null ? !serialNumber.equals(that.serialNumber) : that.serialNumber != null) return false;
         if (brand != null ? !brand.equals(that.brand) : that.brand != null) return false;
         if (model != null ? !model.equals(that.model) : that.model != null) return false;
@@ -93,6 +105,7 @@ public class DeviceEntity {
     @Override
     public int hashCode() {
         int result = id;
+        result = 31 * result + (int) isBooked;
         result = 31 * result + (serialNumber != null ? serialNumber.hashCode() : 0);
         result = 31 * result + (brand != null ? brand.hashCode() : 0);
         result = 31 * result + (model != null ? model.hashCode() : 0);
