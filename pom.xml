@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.3</version>
+        <version>2.7.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.jhr2122.unit5.finalactivity</groupId>
-    <artifactId>FinalActivitySpring</artifactId>
+    <groupId>com.practicas</groupId>
+    <artifactId>SpringPool</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>FinalActivitySpring</name>
-    <description>FinalActivitySpring</description>
+    <name>SpringPool</name>
+    <description>SpringPool</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -37,8 +37,8 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -46,16 +46,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.19</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
-            <version>1.5.7</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.0.1.Final</version>
+            <type>pom</type>
         </dependency>
 
     </dependencies>
@@ -65,7 +61,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${parent.version}</version>
             </plugin>
         </plugins>
     </build>

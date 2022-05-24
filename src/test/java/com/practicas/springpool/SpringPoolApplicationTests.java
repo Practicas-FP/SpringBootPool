@@ -1,10 +1,10 @@
-package com.jhr2122.unit5.finalactivity.finalactivityspring;
+package com.practicas.springpool;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LibrarySpringApplicationTests {
+class SpringPoolApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,12 +1,13 @@
-package com.jhr2122.unit5.finalactivity.finalactivityspring;
+package com.practicas.springpool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LibrarySpringApplication {
+public class SpringPoolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LibrarySpringApplication.class, args);
+        SpringApplication.run(SpringPoolApplication.class, args);
     }
+
 }
