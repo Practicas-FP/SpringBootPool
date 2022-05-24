@@ -34,12 +34,12 @@ public class LendController {
     }
 
     @PostMapping
-    public LendEntity saveUser(@Validated @RequestBody LendEntity lending) {
+    public LendEntity saveLending(@Validated @RequestBody LendEntity lending) {
         return lendEntityDAO.save(lending);
     }
 
     @DeleteMapping("/{code}")
-    public ResponseEntity<?> deleteUser(@PathVariable(value = "code") String code) {
+    public ResponseEntity<?> deleteLending(@PathVariable(value = "code") String code) {
         Optional<LendEntity> user = lendEntityDAO.findById(Integer.parseInt(code));
         if(user.isPresent()) {
             lendEntityDAO.deleteById(Integer.parseInt(code));
