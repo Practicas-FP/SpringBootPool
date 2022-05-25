@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "lend", schema = "bookmypool", catalog = "")
+@Table(name = "lend", schema = "public", catalog = "bookmypool")
 public class LendEntity {
     private int id;
     private Date lendingDate;
@@ -12,6 +12,7 @@ public class LendEntity {
     private int deviceId;
     private int employeeId;
 
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {

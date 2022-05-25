@@ -4,15 +4,17 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-    <property name="connection.url">jdbc:mysql://localhost:3306/bookmypool</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.url">postgres://dayzhbzogcppdh:8416fcc62abcc9b3399c2ae38a0b09dbad160a35ac7f3e75a1a4e0df58410cfa@ec2-63-35-156-160.eu-west-1.compute.amazonaws.com:5432/ddguiavh5o348m
+    </property>
     <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
-    <property name="connection.username">root</property>
-    <property name="connection.password"></property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">postgres</property>
     <mapping class="com.practicas.springpool.models.entities.BrandEntity"/>
     <mapping class="com.practicas.springpool.models.entities.DeviceEntity"/>
     <mapping class="com.practicas.springpool.models.entities.EmployeeEntity"/>
     <mapping class="com.practicas.springpool.models.entities.LendEntity"/>
+
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
   </session-factory>

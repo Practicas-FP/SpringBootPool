@@ -3,7 +3,7 @@ package com.practicas.springpool.models.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "device", schema = "bookmypool", catalog = "")
+@Table(name = "device", schema = "public", catalog = "bookmypool")
 public class DeviceEntity {
     private int id;
     private int isBooked;
@@ -13,6 +13,7 @@ public class DeviceEntity {
     private String operativeSystem;
     private String version;
 
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {

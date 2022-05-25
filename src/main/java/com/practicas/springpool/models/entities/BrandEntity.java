@@ -3,11 +3,12 @@ package com.practicas.springpool.models.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "brand", schema = "bookmypool", catalog = "")
+@Table(name = "brand", schema = "public", catalog = "bookmypool")
 public class BrandEntity {
     private int id;
     private String name;
 
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {

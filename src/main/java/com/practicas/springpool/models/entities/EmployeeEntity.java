@@ -3,7 +3,7 @@ package com.practicas.springpool.models.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee", schema = "bookmypool", catalog = "")
+@Table(name = "employee", schema = "public", catalog = "bookmypool")
 public class EmployeeEntity {
     private int id;
     private String firstName;
@@ -11,6 +11,7 @@ public class EmployeeEntity {
     private String email;
     private String telephone;
 
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {
